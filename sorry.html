@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgive Me? 🥺</title>
+    <link rel="stylesheet" href="sorry.css">
+</head>
+<body>
+    <div class="container">
+        <h1>I'm Sorry 😢</h1>
+        <p>I messed up, and I just want to say... please forgive me? </p>
+        <button class="open-options">Click Here 🦭</button>
+
+        <div class="options hidden">
+            <p>Will you forgive me? 🙏</p>
+            <button class="yes">Haan kiya maaf khush rah tu bhii kyaa yaad rakhega </button>
+            <button class="no">Nhi krti maaf aur manana prdhega</button>
+        </div>
+
+    </div>
+    <div class="message hidden">
+        <p class="final-message"></p>
+        
+    </div>
+    
+    <script>
+        document.querySelector('.open-options').addEventListener('click', function() {
+            document.querySelector('.options').classList.remove('hidden');
+        });
+
+        document.querySelector('.yes').addEventListener('click', function() {
+            document.querySelector('.message').classList.remove('hidden');
+            document.querySelector('.final-message').textContent = "Dhanyavad, good!! jyada dimag nhi lagaya 🦭🦭";
+            document.querySelector('.next-page').classList.remove('hidden');
+        });
+
+        document.querySelector('.no').addEventListener('click', function() {
+            document.querySelector('.message').classList.remove('hidden');
+            document.querySelector('.final-message').textContent = "'Stop overthinking' book ki sakt jarurat hai apko 🦭🦭";
+            document.querySelector('.next-page').classList.remove('hidden');
+        });
+
+        document.querySelector('.next-page').addEventListener('click', function() {
+            window.location.href = "done.html"; // Redirects to the new page
+        });
+    </script>
+    <div>
+        <a href="done.txt"><button>Click here after completion of above task</button></a>
+    </div>
+
+</body>
+</html>
